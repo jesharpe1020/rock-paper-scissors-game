@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <h1>Rock, Paper, Scissors!</h1>
+        <h3>First to 3 wins</h3>
+        <h2>you know what to do<span id="onShoot">...on shoot</span></h2>
+    </div>
+    <div id="stage">
+        <div id="playerContainer">
+            <p id="playerHand" class="hand">✊🏼</p>
+        </div>
+        <div id="compContainer">
+            <p id="computerHand" class="hand">✊🏼</p>
+        </div>
+    </div>
+    <div id="scores">
+        <p id="playerScore">0</p>
+        <p id="compScore">0</p>
+    </div>
+    <div id="choices" class="playing">
+        <button class="choiceBtn" id="rockBtn">Rock <span class="emoji">🪨</span></button>
+        <button class="choiceBtn" id="paperBtn">Paper <span class="emoji">📄</span></button>
+        <button class="choiceBtn" id="scissorsBtn">Scissors <span class="emoji" id="scissorsEmoji">✂️</span></button>
+    </div>
+    <div id="resetSection" class="reset">
+        <button id="resetBtn">replay</button>
+    </div>
+    <div id="resultsSection" class="playing">
+        <p id="results"></p>
+    </div>
+<script src="index.js"></script>
+</body>
+</html>

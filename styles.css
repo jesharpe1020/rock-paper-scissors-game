@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: rgb(71, 71, 71);
+    --highlightColor: rgb(213, 92, 6);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25vh;
+}
+
+#header h1 {
+    font-size: 2em;
+}
+
+#header h3 {
+    margin-top: .5rem;
+    color: var(--highlightColor);
+}
+
+#header h2 {
+    margin-top: .5rem;
+    font-size: 1.2em;
+}
+
+#stage {
+    display: flex;
+    font-size: 4rem;
+    margin: 1.5rem auto;
+}
+
+@keyframes playerBounce {
+    0%, 100% { transform: rotate(0deg); } /* Start and end */
+    
+    /* Simulate an arm swinging up */
+    25% { transform: rotate(-7.5deg); }
+    50% { transform: rotate(-15deg); }
+
+    /* Swing back down */
+    70% { transform: rotate(0deg); }
+}
+
+@keyframes compBounce {
+    0%, 100% { transform: rotate(0deg); } /* Start and end */
+    
+    /* Simulate an arm swinging up */
+    25% { transform: rotate(7.5deg); }
+    50% { transform: rotate(15deg); }
+
+    /* Swing back down */
+    70% { transform: rotate(0deg); }
+}
+
+.playerAnimate {
+    animation: playerBounce .5s linear 4; /* Runs 3 times */
+}
+
+.compAnimate {
+    animation: compBounce .5s linear 4; /* Runs 3 times */
+}
+
+.hand {
+    display: inline-block;
+}
+
+#playerContainer {
+    display: inline-block;
+    position: relative;
+    transform-origin: -100% 125%; /* 50% X (center), 200% Y (way below) */
+}
+
+#compContainer {
+    display: inline-block;
+    position: relative;
+    transform-origin: 200% 125%; /* 50% X (center), 200% Y (way below) */
+}
+
+#playerHand {
+    margin-right: 2rem;
+    transform: scaleX(-1) rotate(-55deg);
+}
+
+#computerHand {
+    margin-left: 2rem;
+    transform: rotate(-65deg);
+}
+
+#scores {
+    display: flex;
+    font-size: 2em;
+    margin-top: -2rem;
+    margin-bottom: 1rem;
+}
+
+#playerScore {
+    margin-right: 3.3rem;
+}
+
+#compScore{
+    margin-left: 3.3rem;
+}
+
+.choiceBtn {
+    width: 7rem;
+    height: 2.2rem;
+    margin: 1rem .75rem 0;
+    font-size: 1.25em;
+    border-radius: .5rem;
+    background-color: rgb(245, 245, 245);
+    border: .5px solid black;
+    cursor: pointer;
+}
+.emoji {
+    display: inline-block;
+}
+#scissorsEmoji{
+    transform: rotate(180deg);
+}
+
+#results {
+    margin-top: 2rem;
+    font-size: 1.5em;
+}
+
+#resetBtn {
+    display: none;
+    width: 6rem;
+    height: 2rem;
+    margin-top: 1rem;
+    font-size: 1.5em;
+    border-radius: .5rem;
+    background-color: rgb(245, 245, 245);
+    border: .5px solid black;
+    cursor: pointer;
+}
+
+#choices {
+    display: block;
+}
